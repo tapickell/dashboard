@@ -1,11 +1,11 @@
-# By default Volt generates this controller for your Main component
 class MainController < Volt::ModelController
   def index
-    # Add code for when the index view is loaded
+    #enqueue obdworker every .50 || .25 seconds
+    page._pid.assign_attribute(:engine_rpm, "3700rpm")
+    page._pid.assign_attribute(:vehicle_speed, "98mph")
   end
 
   def about
-    # Add code for when the about view is loaded
   end
 
   private

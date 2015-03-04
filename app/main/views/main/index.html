@@ -3,4 +3,36 @@
 
 <:Body>
   <h1>Home</h1>
+  #works
+  {{ page._pid.attributes.keys.each do |key| }}
+  <p>{{ "#{key} is the key" }}</p>
+  {{ end }}
+
+  #works
+  {{ page._pid.attributes.values.each do |value| }}
+  <p>{{ "#{value} is the value" }}</p>
+  {{ end }}
+
+  #what values is
+  <p>{{ page._pid.attributes.values.class }}  ::  {{ page._pid.attributes.values }}</p>
+
+  #what attributes is
+ <p>{{ page._pid.attributes.class }}  ::  {{ page._pid.attributes }}</p>
+
+
+  #wtf
+  {{ page._pid.attributes.each do |hash| }}
+  <p>{{ hash.class }}</p>
+  {{ end }}
+
+
+
+  #doesnt work
+  <p/>
+  {{ page._pid.attributes.each{|key, value| puts "<p>#{key} is #{value}</p>"} }}
+
+  <p/>
+  #should work
+  <p/>
+  {{ page._pid.attributes.each{|key, value| "<p>#{key} is #{value}</p>"} }}
 

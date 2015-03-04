@@ -14,6 +14,8 @@ gem 'volt-bootstrap-jumbotron-theme'
 # User templates for login, signup, and logout menu.
 gem 'volt-user-templates'
 
+gem 'obd'
+
 # Server for MRI
 platform :mri do
   gem 'thin', '~> 1.6.0'
