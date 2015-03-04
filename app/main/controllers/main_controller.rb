@@ -1,6 +1,10 @@
 class MainController < Volt::ModelController
   def index
     #enqueue obdworker every .50 || .25 seconds
+    #while true
+      #page._pid.assign_attributes ObdWorker.perform
+      #sleep(0.5)
+    #end
     page._pid.assign_attribute(:engine_rpm, "3700rpm")
     page._pid.assign_attribute(:vehicle_speed, "98mph")
   end
